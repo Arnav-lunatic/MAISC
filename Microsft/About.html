@@ -687,36 +687,7 @@ By becoming a part of this community, students also get exclusive access to Micr
         </p>
     </div>
     <div class="member-container">
-        <div class="member-card">
-            <div class="card-image">
-                <img src="./images/nitish.jpeg" alt="Member Image">
-            </div>
-            <div class="card-content">
-                <h2>Nitish Sheoran</h2>
-                <p>Organizer <br> MLSA - GBU</p>
-                
-                <div class="btn-container">
-                    <a href="https://www.linkedin.com/in/nitishsheoran/"><button class="view-profile">View Profile</button></a>
-                </div>
-            </div>
-        </div>
-    
-        <div class="member-card">
-            <div class="card-image">
-                <img src="./images/sonal.jpeg" alt="Member Image">
-            </div>
-            <div class="card-content">
-                <h2>Sonal Tyagi</h2>
-                <p>Organizer <br> MLSA - GBU</p>
-                
-                <div class="btn-container">
-                    <a href="https://www.linkedin.com/in/sonaltyagii/"><button class="view-profile">View Profile</button></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-        
+        <!-- Member's Cards -->
     </div>
     <div class="socialmedia">
         <div class="social-container">
@@ -812,6 +783,68 @@ By becoming a part of this community, students also get exclusive access to Micr
                 item.classList.add('active');
             });
         });
+
+        const members = [
+            {
+                name: 'Nitish Sheoran', 
+                image: './images/nitish.jpeg', 
+                linkedin: 'https://www.linkedin.com/in/nitishsheoran/',
+                role1: 'Organizer',
+                role2: 'MLSA - GBU'
+            },
+            {
+                name: 'Sonal Tyagi', 
+                image: './images/sonal.jpeg', 
+                linkedin: 'https://www.linkedin.com/in/sonaltyagii/',
+                role1: 'Organizer',
+                role2: 'MLSA - GBU'
+            },
+            {
+                name: 'Neelesh Yadav', 
+                image: './images/neelesh.jpeg', 
+                linkedin: 'https://www.linkedin.com/in/nitishsheoran/',
+                role1: 'Web Dev',       
+                role2: 'MLSA - GBU'
+            },
+            {
+                name: 'Mahika Singh', 
+                image: './images/mahika.jpeg', 
+                linkedin: 'https://www.linkedin.com/in/nitishsheoran/',
+                role1: 'Content & PR',
+                role2: 'MLSA - GBU'
+            },
+            {
+                name: 'Vipin Kumar', 
+                image: './images/vipin.jpeg', 
+                linkedin: 'https://www.linkedin.com/in/nitishsheoran/',
+                role1: 'Team Management',
+                role2: 'MLSA - GBU'
+            },
+            {
+                name: 'Trisha', 
+                image: './images/trisha.jpeg', 
+                linkedin: 'https://www.linkedin.com/in/nitishsheoran/',
+                role1: 'Graphics Design',
+                role2: 'MLSA - GBU'
+            },
+        ]
+        const membersContainer = document.querySelector('.member-container')
+        members.forEach(eachMember => {
+            membersContainer.innerHTML += `<div class="member-card">
+                                            <div class="card-image">
+                                                <img src=${eachMember.image} alt="Member Image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h2>${eachMember.name}</h2>
+                                                <p>${eachMember.role1} <br> ${eachMember.role2}</p>
+                                                
+                                                <div class="btn-container">
+                                                    <a href=${eachMember.linkedin}><button class="view-profile">View Profile</button></a>
+                                                </div>
+                                            </div>
+                                        </div>`
+        });
+
     </script>
 
 </body>
